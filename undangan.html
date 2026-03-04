@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation 2026</title>
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+body{
+    margin:0;
+    font-family:'times', serif;
+    background:linear-gradient(135deg,#f5f0e6,#e8d8b9);
+    text-align:center;
+    overflow-x:hidden;
+    color:#5a4a2c;
+    scroll-behavior:smooth;
+}
+
+.hidden{display:none;}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#b48a2c,#e6c76a);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    margin:5px;
+}
+button:hover{transform:scale(1.05);}
+
+/* ================= COVER ================= */
+
+.cover{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#e8d8b9,#f5f0e6);
+    transition:1s;
+}
+
+.cover.open{
+    transform:rotateY(90deg);
+    opacity:0;
+}
+
+.judul{
+    font-size:30px;
+    background:linear-gradient(to right,#b48a2c,#fff2b0,#b48a2c);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:glow 3s infinite linear;
+}
+
+@keyframes glow{
+    50%{filter:brightness(1.4);}
+}
+
+.nama-tamu{
+    margin:15px 0;
+    padding:10px 25px;
+    border-radius:25px;
+    background:white;
+    border:1px solid #b48a2c;
+    font-weight:bold;
+}
+
+/* ================= ISI ================= */
+
+.container{
+    padding:60px 20px;
+}
+
+.nama{
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.foto img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.countdown{
+    margin-top:20px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+/* ================= GALERI FOTO ================= */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    width:80%;
+    max-width:300px;
+    animation:fade 0.5s ease;
+}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;}
+}
+
+/* ================= BUNGA ================= */
+
+.bunga{
+    position:fixed;
+    top:-10px;
+    font-size:20px;
+    animation:jatuh linear forwards;
+}
+
+@keyframes jatuh{
+    to{transform:translateY(110vh);}
+}
+
+/* ================= PESAN ================= */
+
+.pesan-box{
+    margin-top:40px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.pesan-box input,.pesan-box textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:15px;
+    border:1px solid #ddd;
+}
+
+.pesan-item{
+    background:#f5f0e6;
+    padding:12px;
+    border-radius:15px;
+    margin-top:10px;
+    text-align:left;
+}
+
+/* ================= MUSIC BUTTON ================= */
+
+.music-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#b48a2c;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+<h1 class="judul">ARSIP STORY FATUR&ASNI</h1>
+<p>“Jika ini baik, dekatkan. Jika tidak, jauhkan.”</p>
+<div id="namaTamu" class="nama-tamu">jangan lupa bahagia sayang</div>
+<button onclick="buka()">Buka arsip</button>
+</div>
+
+<audio id="lagu" loop preload="auto">
+<source src="https://files.catbox.moe/0sprfw.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ISI -->
+<div class="container hidden" id="isi">
+
+<h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+
+<div class="foto">
+<img src="https://cdn.phototourl.com/uploads/2026-03-03-4b818cdb-d23c-428a-9fea-dacbd0c20965.jpg">
+</div>
+
+<p>"Setiap cerita yang tersimpan di sini adalah bagian dari takdir yang Allah tulis dengan sangat rapi. Ada tawa, ada doa, ada harap yang pernah kupanjatkan diam-diam. Semoga yang pernah terjadi menjadi pelajaran, dan yang akan datang menjadi kebaikan."</p>
+
+<div class="nama">MIFTAH FATURAHMAN</div>
+<div>&</div>
+<div class="nama">ASNI AULIA MUHSIN</div>
+
+<p>📅 25 Juli 2024</p>
+<p>📍 Banda Neira</p>
+
+<div id="countdown" class="countdown"></div>
+
+<button onclick="window.open('https://www.google.com/maps/search/Banda+Neira')">📍 Lihat Lokasi</button>
+<button onclick="bukaAmplop()">💳 Amplop Digital</button>
+<button onclick="saveCalendar()">📅 Save to Calendar</button>
+<button onclick="document.getElementById('galeri').scrollIntoView({behavior:'smooth'})">📸 Lihat Galeri</button>
+
+<!-- GALERI -->
+<div id="galeri">
+<h2>Galeri Foto</h2>
+<div class="gallery">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-6c9e07e0-404f-49ea-ba44-4b8084932750.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-8c9a7ac8-5469-475b-b476-d1f07cb7dd06.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-195234db-6686-4f5a-a142-9d524e644aaf.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-6f4c4248-b426-4624-a323-bac8e009a982.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-dbd0a085-1598-4d49-babd-423b1d1074f9.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-da2f74bf-20c8-4ace-a500-ddc6919c1b85.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-43f9a8c5-4eb9-44cb-be61-dc7a875a2867.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-581f53d0-2c30-4249-867d-3a76bbd5bd68.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-22e41bf5-0d86-4d22-9599-7f0d9fb32947.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-1b000970-c518-47b5-85b9-12a629e96168.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-ec488ff2-f902-4649-884d-de2561409f5d.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-0a697983-3240-40a3-90aa-b64b6c6b9087.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-5464c9eb-490c-417d-82c4-53ff02f5008a.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-ce94a6d4-adac-43ab-a522-1ecd34a3f6a2.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-cc597a0d-f10a-42ca-9a30-b827b86c51bf.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-02d3318b-f444-48c0-96ab-356d348b335b.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-1ca767b0-44e0-4d65-b45d-0d59c0867f8c.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-77a1e1bd-ff1d-4003-954a-cab3e716dbef.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-d760a49a-0152-41fb-8626-29cf1eecc3fb.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-d1a91cfb-47c0-4aaf-8b33-d36715f47826.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-6f1b9bef-7bc0-4f8a-b46b-5a396afb9f69.jpg">
+<img src="https://cdn.phototourl.com/uploads/2026-03-04-3c4dee63-5dce-433c-8b1f-a90bcc830231.jpg">
+</div>
+</div>
+
+<div class="pesan-box">
+<h3>💌 Kirim Doa</h3>
+<input type="text" id="namaPengirim" placeholder="Nama Anda">
+<textarea id="isiPesan" placeholder="Tulis doa terbaik..."></textarea>
+<button onclick="kirimPesan()">Kirim</button>
+<div id="daftarPesan"></div>
+</div>
+
+</div>
+
+<div class="music-btn" onclick="toggleMusic()">🎵</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<h3>Amplop Digital</h3>
+<p>DANA</p>
+<p id="rekening"><strong>081524405438</strong></p>
+<p>a.n Miftah Faturahman</p>
+<button onclick="copyRek()">Copy Rekening</button>
+<button onclick="tutupAmplop()">Tutup</button>
+</div>
+<!-- OVERLAY AKTIFKAN MUSIK -->
+<div id="musicOverlay" style="
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+flex-direction:column;
+color:white;
+text-align:center;
+padding:20px;
+">
+<h2>🎵 Aktifkan Musik</h2>
+<p>Klik tombol di bawah untuk memulai musik undangan</p>
+<button onclick="paksaPlay()">Putar Musik</button>
+</div>
+</div>
+
+<script>
+/* SISTEM MUSIK ANTI GAGAL */
+
+function cobaPlayMusic(){
+let lagu = document.getElementById("lagu");
+lagu.muted = false;
+lagu.volume = 1;
+
+lagu.play().then(()=>{
+console.log("Musik berhasil diputar");
+}).catch(()=>{
+document.getElementById("musicOverlay").style.display="flex";
+});
+}
+
+function paksaPlay(){
+let lagu = document.getElementById("lagu");
+lagu.play();
+document.getElementById("musicOverlay").style.display="none";
+}
+
+/* SEMUA SCRIPT ASLI KAMU TETAP ADA */
+function buka(){
+document.getElementById("cover").classList.add("open");
+setTimeout(()=>{
+document.getElementById("cover").style.display="none";
+document.getElementById("isi").classList.remove("hidden");
+cobaPlayMusic();
+mulaiCountdown();
+bunga();
+},800);
+}
+
+function toggleMusic(){
+let lagu=document.getElementById("lagu");
+lagu.paused?lagu.play():lagu.pause();
+}
+
+function mulaiCountdown(){
+const target=new Date("July 25, 2026 00:00:00").getTime();
+setInterval(()=>{
+let now=new Date().getTime();
+let s=target-now;
+let d=Math.floor(s/(1000*60*60*24));
+let h=Math.floor((s%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((s%(1000*60*60))/(1000*60));
+let sec=Math.floor((s%(1000*60))/1000);
+document.getElementById("countdown").innerHTML=
+d+" Hari "+h+" Jam "+m+" Menit "+sec+" Detik";
+},1000);
+}
+
+function bunga(){
+setInterval(()=>{
+let b=document.createElement("div");
+b.className="bunga";
+b.innerHTML="🌸";
+b.style.left=Math.random()*100+"vw";
+b.style.animationDuration=(Math.random()*3+3)+"s";
+document.body.appendChild(b);
+setTimeout(()=>b.remove(),6000);
+},800);
+}
+
+function bukaAmplop(){document.getElementById("modal").style.display="flex";}
+function tutupAmplop(){document.getElementById("modal").style.display="none";}
+function copyRek(){
+navigator.clipboard.writeText("081524405438");
+alert("Rekening berhasil disalin!");
+}
+
+function saveCalendar(){
+window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Miftah+%26+Asni&dates=20260725T000000/20260725T030000");
+}
+
+function kirimPesan(){
+let nama=document.getElementById("namaPengirim").value;
+let pesan=document.getElementById("isiPesan").value;
+if(!nama||!pesan){alert("Isi dulu 😊");return;}
+let data=JSON.parse(localStorage.getItem("pesan"))||[];
+data.push({nama,pesan});
+localStorage.setItem("pesan",JSON.stringify(data));
+document.getElementById("namaPengirim").value="";
+document.getElementById("isiPesan").value="";
+tampil();
+}
+function tampil(){
+let daftar=document.getElementById("daftarPesan");
+daftar.innerHTML="";
+let data=JSON.parse(localStorage.getItem("pesan"))||[];
+data.reverse().forEach(item=>{
+daftar.innerHTML+=`<div class="pesan-item"><strong>${item.nama}</strong><br>${item.pesan}</div>`;
+});
+}
+document.addEventListener("DOMContentLoaded",tampil);
+
+const params=new URLSearchParams(window.location.search);
+const tamu=params.get('to');
+if(tamu){document.getElementById("namaTamu").innerText=tamu;}
+
+</script>
+
+</body>
+</html>

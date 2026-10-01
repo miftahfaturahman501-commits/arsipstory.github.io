@@ -2,422 +2,288 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Invitation 2026</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Usaha Es">
+<title>Usaha Es</title>
 <style>
-
-/* ================= GLOBAL ================= */
-
-body{
-    margin:0;
-    font-family:'times', serif;
-    background:linear-gradient(135deg,#f5f0e6,#e8d8b9);
-    text-align:center;
-    overflow-x:hidden;
-    color:#5a4a2c;
-    scroll-behavior:smooth;
-}
-
-.hidden{display:none;}
-
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(45deg,#b48a2c,#e6c76a);
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    margin:5px;
-}
-button:hover{transform:scale(1.05);}
-
-/* ================= COVER ================= */
-
-.cover{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#e8d8b9,#f5f0e6);
-    transition:1s;
-}
-
-.cover.open{
-    transform:rotateY(90deg);
-    opacity:0;
-}
-
-.judul{
-    font-size:30px;
-    background:linear-gradient(to right,#b48a2c,#fff2b0,#b48a2c);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:glow 3s infinite linear;
-}
-
-@keyframes glow{
-    50%{filter:brightness(1.4);}
-}
-
-.nama-tamu{
-    margin:15px 0;
-    padding:10px 25px;
-    border-radius:25px;
-    background:white;
-    border:1px solid #b48a2c;
-    font-weight:bold;
-}
-
-/* ================= ISI ================= */
-
-.container{
-    padding:60px 20px;
-}
-
-.nama{
-    font-size:24px;
-    font-weight:bold;
-    margin:10px 0;
-}
-
-.foto img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
-}
-
-.countdown{
-    margin-top:20px;
-    font-weight:bold;
-    font-size:18px;
-}
-
-/* ================= GALERI FOTO ================= */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
-margin-top:30px;
-}
-
-.gallery img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.2);
-transition:0.4s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-content{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    width:80%;
-    max-width:300px;
-    animation:fade 0.5s ease;
-}
-
-@keyframes fade{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;}
-}
-
-/* ================= BUNGA ================= */
-
-.bunga{
-    position:fixed;
-    top:-10px;
-    font-size:20px;
-    animation:jatuh linear forwards;
-}
-
-@keyframes jatuh{
-    to{transform:translateY(110vh);}
-}
-
-/* ================= PESAN ================= */
-
-.pesan-box{
-    margin-top:40px;
-    background:white;
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-.pesan-box input,.pesan-box textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border-radius:15px;
-    border:1px solid #ddd;
-}
-
-.pesan-item{
-    background:#f5f0e6;
-    padding:12px;
-    border-radius:15px;
-    margin-top:10px;
-    text-align:left;
-}
-
-/* ================= MUSIC BUTTON ================= */
-
-.music-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#b48a2c;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#718096;--primary:#2563eb;--danger:#dc2626;--line:#e5e7eb;--green:#059669;--orange:#d97706}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);padding-bottom:82px}
+header{background:#0f172a;color:#fff;padding:22px 18px 20px;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:23px} header p{margin:5px 0 0;color:#cbd5e1;font-size:13px}
+main{max-width:720px;margin:auto;padding:16px}
+.page{display:none}.page.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:13px;box-shadow:0 2px 10px #00000008}
+.card h2,.card h3{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stat{padding:14px;border-radius:13px;background:#f8fafc;border:1px solid var(--line)}.stat small{display:block;color:var(--muted);font-size:12px}.stat b{display:block;font-size:19px;margin-top:5px}
+label{font-size:13px;font-weight:650;display:block;margin:11px 0 6px} input,select,button{font:inherit} input,select{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;outline:none}input:focus,select:focus{border-color:var(--primary)}
+button{border:0;border-radius:10px;padding:11px 14px;font-weight:700;cursor:pointer}.primary{background:var(--primary);color:#fff}.secondary{background:#e2e8f0;color:#172033}.danger{background:#fee2e2;color:#991b1b}.green{background:#dcfce7;color:#166534}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex:1}.row button{flex:0 0 auto}
+.big{font-size:28px;font-weight:800}.muted{color:var(--muted)}.money{font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px 5px;border-bottom:1px solid var(--line)}th{color:var(--muted)}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20}.nav{width:100%;max-width:720px;display:grid;grid-template-columns:repeat(5,1fr)}.nav button{background:#fff;border-radius:0;color:#64748b;padding:10px 4px;font-size:11px}.nav button.active{color:var(--primary);font-weight:800}.nav span{display:block;font-size:20px}
+.badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:700}.pending{background:#fef3c7;color:#92400e}.paid{background:#dcfce7;color:#166534}
+.empty{text-align:center;color:var(--muted);padding:18px}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;padding:20px;align-items:flex-end}.modal.show{display:flex}.sheet{background:#fff;width:100%;max-width:720px;margin:auto;border-radius:18px;padding:18px;max-height:90vh;overflow:auto}
+@media(min-width:600px){.modal{align-items:center}.sheet{max-width:520px}}
 </style>
 </head>
-
 <body>
+<header>
+  <h1>🧊 Usaha Es</h1>
+  <p id="todayText">Memuat tanggal...</p>
+</header>
 
-<!-- COVER -->
-<div class="cover" id="cover">
-<h1 class="judul">ARSIP STORY FATUR&ASNI</h1>
-<p>“Jika ini baik, dekatkan. Jika tidak, jauhkan.”</p>
-<div id="namaTamu" class="nama-tamu">jangan lupa bahagia sayang</div>
-<button onclick="buka()">Buka arsip</button>
-</div>
+<main>
+<section id="dashboard" class="page active">
+  <div class="card">
+    <h2 id="weekTitle">Minggu berjalan</h2>
+    <p class="muted" id="weekRange"></p>
+    <div class="grid">
+      <div class="stat"><small>Es bersih</small><b id="dQty">0</b></div>
+      <div class="stat"><small>Penjualan kotor</small><b id="dGross">Rp0</b></div>
+      <div class="stat"><small>Bagian toko 15%</small><b id="dStore">Rp0</b></div>
+      <div class="stat"><small>Diterima 85%</small><b id="dIncome">Rp0</b></div>
+      <div class="stat"><small>Modal dibeli</small><b id="dCapital">Rp0</b></div>
+      <div class="stat"><small>Surplus perkiraan</small><b id="dProfit">Rp0</b></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Status pembayaran Jumat</h3>
+    <div id="paymentStatus"></div>
+  </div>
+  <div class="card">
+    <h3>Ringkasan hari ini</h3>
+    <div id="todaySummary"></div>
+  </div>
+</section>
 
-<audio id="lagu" loop preload="auto">
-<source src="https://files.catbox.moe/0sprfw.mp3" type="audio/mpeg">
-</audio>
+<section id="sales" class="page">
+  <div class="card">
+    <h2>🧊 Antar Es</h2>
+    <p class="muted">1 toko. Tambahkan setiap kali mengantar. Angka negatif bisa dipakai untuk retur/koreksi.</p>
+    <label>Tanggal</label><input type="date" id="saleDate">
+    <label>Jumlah es</label><input type="number" id="saleQty" placeholder="Contoh: 80">
+    <label>Catatan</label><input id="saleNote" placeholder="Contoh: antar pagi / retur 3">
+    <button class="primary" style="width:100%;margin-top:12px" onclick="addSale()">+ Simpan Antar Es</button>
+  </div>
+  <div class="card">
+    <h3>Catatan minggu ini</h3>
+    <div id="salesList"></div>
+  </div>
+</section>
 
-<!-- ISI -->
-<div class="container hidden" id="isi">
+<section id="capital" class="page">
+  <div class="card">
+    <h2>📦 Modal Mingguan</h2>
+    <p class="muted">Catat bahan yang dibeli selama minggu berjalan.</p>
+    <label>Tanggal beli</label><input type="date" id="buyDate">
+    <label>Bahan</label>
+    <select id="buyItem">
+      <option>Pop Ice</option><option>Plastik</option><option>Pemanis</option><option>Galon</option><option>Lainnya</option>
+    </select>
+    <label>Jumlah</label><input type="number" id="buyQty" step="0.01" placeholder="Contoh: 5">
+    <label>Satuan</label><input id="buyUnit" placeholder="contoh: gantung / pack / galon">
+    <label>Harga satuan</label><input type="text" id="buyPrice" inputmode="numeric" placeholder="Contoh: 12.000">
+    <div id="buyTotalPreview" class="muted" style="margin-top:8px">Total: Rp0</div>
+<button class="primary" style="width:100%;margin-top:12px" onclick="addPurchase()">+ Simpan Pembelian</button>
+  </div>
+  <div class="card">
+    <h3>Pembelian minggu ini</h3>
+    <div id="capitalList"></div>
+  </div>
+</section>
 
-<h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+<section id="payment" class="page">
+  <div class="card">
+    <h2>💰 Pembayaran Jumat</h2>
+    <p class="muted">Pembayaran dihitung dari es bersih × harga jual, lalu toko mendapat 15%.</p>
+    <label>Harga jual per es</label><input type="number" id="pricePerIce" value="1000" onchange="saveSettings()">
+    <label>Persentase toko</label><input type="number" id="storePercent" value="15" step="0.01" onchange="saveSettings()">
+    <div id="paymentDetail" style="margin-top:14px"></div>
+    <button id="payButton" class="green" style="width:100%;margin-top:12px" onclick="markPaid()">✅ Tandai Sudah Dibayar</button>
+  </div>
+</section>
 
-<div class="foto">
-<img src="https://cdn.phototourl.com/uploads/2026-03-03-4b818cdb-d23c-428a-9fea-dacbd0c20965.jpg">
-</div>
+<section id="reports" class="page">
+  <div class="card">
+    <h2>📊 Laporan</h2>
+    <p class="muted">Riwayat mingguan yang tersimpan di perangkat.</p>
+    <div class="row">
+      <button class="secondary" onclick="exportData()">⬇️ Backup Data</button>
+      <button class="secondary" onclick="document.getElementById('restoreFile').click()">⬆️ Pulihkan</button>
+      <input type="file" id="restoreFile" accept=".json" style="display:none" onchange="restoreData(event)">
+    </div>
+  </div>
+  <div id="historyList"></div>
+</section>
+</main>
 
-<p>"Setiap cerita yang tersimpan di sini adalah bagian dari takdir yang Allah tulis dengan sangat rapi. Ada tawa, ada doa, ada harap yang pernah kupanjatkan diam-diam. Semoga yang pernah terjadi menjadi pelajaran, dan yang akan datang menjadi kebaikan."</p>
-
-<div class="nama">MIFTAH FATURAHMAN</div>
-<div>&</div>
-<div class="nama">ASNI AULIA MUHSIN</div>
-
-<p>📅 25 Juli 2024</p>
-<p>📍 Banda Neira</p>
-
-<div id="countdown" class="countdown"></div>
-
-<button onclick="window.open('https://www.google.com/maps/search/Banda+Neira')">📍 Lihat Lokasi</button>
-<button onclick="bukaAmplop()">💳 Amplop Digital</button>
-<button onclick="saveCalendar()">📅 Save to Calendar</button>
-<button onclick="document.getElementById('galeri').scrollIntoView({behavior:'smooth'})">📸 Lihat Galeri</button>
-
-<!-- GALERI -->
-<div id="galeri">
-<h2>Galeri Foto</h2>
-<div class="gallery">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-6c9e07e0-404f-49ea-ba44-4b8084932750.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-8c9a7ac8-5469-475b-b476-d1f07cb7dd06.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-195234db-6686-4f5a-a142-9d524e644aaf.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-6f4c4248-b426-4624-a323-bac8e009a982.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-dbd0a085-1598-4d49-babd-423b1d1074f9.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-da2f74bf-20c8-4ace-a500-ddc6919c1b85.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-43f9a8c5-4eb9-44cb-be61-dc7a875a2867.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-581f53d0-2c30-4249-867d-3a76bbd5bd68.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-22e41bf5-0d86-4d22-9599-7f0d9fb32947.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-1b000970-c518-47b5-85b9-12a629e96168.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-ec488ff2-f902-4649-884d-de2561409f5d.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-0a697983-3240-40a3-90aa-b64b6c6b9087.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-5464c9eb-490c-417d-82c4-53ff02f5008a.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-ce94a6d4-adac-43ab-a522-1ecd34a3f6a2.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-cc597a0d-f10a-42ca-9a30-b827b86c51bf.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-02d3318b-f444-48c0-96ab-356d348b335b.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-1ca767b0-44e0-4d65-b45d-0d59c0867f8c.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-77a1e1bd-ff1d-4003-954a-cab3e716dbef.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-d760a49a-0152-41fb-8626-29cf1eecc3fb.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-d1a91cfb-47c0-4aaf-8b33-d36715f47826.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-6f1b9bef-7bc0-4f8a-b46b-5a396afb9f69.jpg">
-<img src="https://cdn.phototourl.com/uploads/2026-03-04-3c4dee63-5dce-433c-8b1f-a90bcc830231.jpg">
-</div>
-</div>
-
-<div class="pesan-box">
-<h3>💌 Kirim Doa</h3>
-<input type="text" id="namaPengirim" placeholder="Nama Anda">
-<textarea id="isiPesan" placeholder="Tulis doa terbaik..."></textarea>
-<button onclick="kirimPesan()">Kirim</button>
-<div id="daftarPesan"></div>
-</div>
-
-</div>
-
-<div class="music-btn" onclick="toggleMusic()">🎵</div>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-<div class="modal-content">
-<h3>Amplop Digital</h3>
-<p>DANA</p>
-<p id="rekening"><strong>081524405438</strong></p>
-<p>a.n Miftah Faturahman</p>
-<button onclick="copyRek()">Copy Rekening</button>
-<button onclick="tutupAmplop()">Tutup</button>
-</div>
-<!-- OVERLAY AKTIFKAN MUSIK -->
-<div id="musicOverlay" style="
-position:fixed;
-inset:0;
-background:rgba(0,0,0,0.8);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:9999;
-flex-direction:column;
-color:white;
-text-align:center;
-padding:20px;
-">
-<h2>🎵 Aktifkan Musik</h2>
-<p>Klik tombol di bawah untuk memulai musik undangan</p>
-<button onclick="paksaPlay()">Putar Musik</button>
-</div>
+<div class="bottom">
+<nav class="nav">
+<button class="active" data-page="dashboard" onclick="showPage('dashboard',this)"><span>🏠</span>Utama</button>
+<button data-page="sales" onclick="showPage('sales',this)"><span>🧊</span>Antar</button>
+<button data-page="capital" onclick="showPage('capital',this)"><span>📦</span>Modal</button>
+<button data-page="payment" onclick="showPage('payment',this)"><span>💰</span>Bayar</button>
+<button data-page="reports" onclick="showPage('reports',this)"><span>📊</span>Laporan</button>
+</nav>
 </div>
 
 <script>
-/* SISTEM MUSIK ANTI GAGAL */
+const KEY="usahaEsDataV1";
+let db=JSON.parse(localStorage.getItem(KEY)||'null')||{sales:[],purchases:[],payments:[],settings:{price:1000,storePercent:15}};
 
-function cobaPlayMusic(){
-let lagu = document.getElementById("lagu");
-lagu.muted = false;
-lagu.volume = 1;
+function save(){localStorage.setItem(KEY,JSON.stringify(db));renderAll()}
+function rupiah(n){return new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Math.round(n||0))}
+function pad(n){return String(n).padStart(2,'0')}
+function dateStr(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function parseDate(s){let [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)}
+function startOfWeek(s){let d=parseDate(s);let day=d.getDay();d.setDate(d.getDate()-day);return dateStr(d)}
+function weekDates(start){let a=[];let d=parseDate(start);for(let i=0;i<6;i++){let x=new Date(d);x.setDate(d.getDate()+i);a.push(dateStr(x))}return a}
+function fmtDate(s){return parseDate(s).toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'})}
+function currentWeek(){return startOfWeek(dateStr(new Date()))}
+function weekEnd(start){let d=parseDate(start);d.setDate(d.getDate()+5);return dateStr(d)}
+function weekSales(start){let end=weekEnd(start);return db.sales.filter(x=>x.date>=start&&x.date<=end)}
+function weekPurchases(start){let end=weekEnd(start);return db.purchases.filter(x=>x.date>=start&&x.date<=end)}
+function qtyForWeek(start){return weekSales(start).reduce((a,x)=>a+Number(x.qty),0)}
+function gross(start){return qtyForWeek(start)*Number(db.settings.price)}
+function storeCut(start){return gross(start)*Number(db.settings.storePercent)/100}
+function income(start){return gross(start)-storeCut(start)}
+function capital(start){return weekPurchases(start).reduce((a,x)=>a+Number(x.price),0)}
+function paid(start){return db.payments.some(x=>x.week===start&&x.paid)}
 
-lagu.play().then(()=>{
-console.log("Musik berhasil diputar");
-}).catch(()=>{
-document.getElementById("musicOverlay").style.display="flex";
-});
+function showPage(id,btn){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
+ (btn||document.querySelector('.nav button[data-page="'+id+'"]')).classList.add('active');
+ renderAll();
 }
-
-function paksaPlay(){
-let lagu = document.getElementById("lagu");
-lagu.play();
-document.getElementById("musicOverlay").style.display="none";
+function setDefaults(){
+ let t=dateStr(new Date());
+ document.getElementById('saleDate').value=t;
+ document.getElementById('buyDate').value=t;
+ document.getElementById('pricePerIce').value=db.settings.price;
+ document.getElementById('storePercent').value=db.settings.storePercent;
 }
-
-/* SEMUA SCRIPT ASLI KAMU TETAP ADA */
-function buka(){
-document.getElementById("cover").classList.add("open");
-setTimeout(()=>{
-document.getElementById("cover").style.display="none";
-document.getElementById("isi").classList.remove("hidden");
-cobaPlayMusic();
-mulaiCountdown();
-bunga();
-},800);
+function addSale(){
+ let date=document.getElementById('saleDate').value, qty=Number(document.getElementById('saleQty').value);
+ if(!date||!qty){alert("Isi tanggal dan jumlah es.");return}
+ db.sales.push({id:Date.now(),date,qty,note:document.getElementById('saleNote').value.trim()});
+ document.getElementById('saleQty').value='';document.getElementById('saleNote').value='';save();
 }
-
-function toggleMusic(){
-let lagu=document.getElementById("lagu");
-lagu.paused?lagu.play():lagu.pause();
+function addPurchase(){
+ let date=document.getElementById('buyDate').value,
+     item=document.getElementById('buyItem').value,
+     qty=Number(document.getElementById('buyQty').value),
+     unit=document.getElementById('buyUnit').value.trim(),
+     unitPrice=Number(
+    document.getElementById('buyPrice').value.replace(/\./g,'').replace(/,/g,'')
+),
+     price=qty*unitPrice;
+ if(!date||!qty||!unitPrice){alert("Isi tanggal, jumlah, dan harga satuan.");return}
+ db.purchases.push({id:Date.now(),date,item,qty,unit,unitPrice,price});
+ document.getElementById('buyQty').value='';
+ document.getElementById('buyPrice').value='';
+ document.getElementById('buyTotalPreview').textContent='Total: Rp0';
+ save();
 }
-
-function mulaiCountdown(){
-const target=new Date("July 25, 2026 00:00:00").getTime();
-setInterval(()=>{
-let now=new Date().getTime();
-let s=target-now;
-let d=Math.floor(s/(1000*60*60*24));
-let h=Math.floor((s%(1000*60*60*24))/(1000*60*60));
-let m=Math.floor((s%(1000*60*60))/(1000*60));
-let sec=Math.floor((s%(1000*60))/1000);
-document.getElementById("countdown").innerHTML=
-d+" Hari "+h+" Jam "+m+" Menit "+sec+" Detik";
-},1000);
+function del(type,id){if(!confirm("Hapus catatan ini?"))return;db[type]=db[type].filter(x=>x.id!==id);save()}
+function updateBuyPreview(){
+ let qty=Number(document.getElementById('buyQty').value)||0;
+ let unitPrice=Number(
+    document.getElementById('buyPrice').value.replace(/\./g,'').replace(/,/g,'')
+)||0;
+ document.getElementById('buyTotalPreview').textContent='Total: '+rupiah(qty*unitPrice);
 }
-
-function bunga(){
-setInterval(()=>{
-let b=document.createElement("div");
-b.className="bunga";
-b.innerHTML="🌸";
-b.style.left=Math.random()*100+"vw";
-b.style.animationDuration=(Math.random()*3+3)+"s";
-document.body.appendChild(b);
-setTimeout(()=>b.remove(),6000);
-},800);
+function saveSettings(){
+ db.settings.price=Number(document.getElementById('pricePerIce').value)||1000;
+ db.settings.storePercent=Number(document.getElementById('storePercent').value)||15;
+ save();
 }
-
-function bukaAmplop(){document.getElementById("modal").style.display="flex";}
-function tutupAmplop(){document.getElementById("modal").style.display="none";}
-function copyRek(){
-navigator.clipboard.writeText("081524405438");
-alert("Rekening berhasil disalin!");
+function markPaid(){
+ let w=currentWeek();if(paid(w)){alert("Minggu ini sudah ditandai dibayar.");return}
+ db.payments.push({week:w,paid:true,date:dateStr(new Date()),amount:income(w)});save();alert("Pembayaran minggu ini ditandai sudah diterima.");
 }
+function renderAll(){
+ let now=new Date(), today=dateStr(now), w=currentWeek(), qty=qtyForWeek(w), g=gross(w), sc=storeCut(w), inc=income(w), cap=capital(w);
+ document.getElementById('todayText').textContent=now.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+ document.getElementById('weekTitle').textContent="Minggu berjalan";
+ document.getElementById('weekRange').textContent=fmtDate(w)+" – "+fmtDate(weekEnd(w))+" • pembayaran Jumat";
+ document.getElementById('dQty').textContent=qty;
+ document.getElementById('dGross').textContent=rupiah(g);
+ document.getElementById('dStore').textContent=rupiah(sc);
+ document.getElementById('dIncome').textContent=rupiah(inc);
+ document.getElementById('dCapital').textContent=rupiah(cap);
+ document.getElementById('dProfit').textContent=rupiah(inc-cap);
+ document.getElementById('paymentStatus').innerHTML=paid(w)?'<span class="badge paid">🟢 SUDAH DIBAYAR</span><p class="muted">Pembayaran minggu ini sudah dicatat.</p>':'<span class="badge pending">🟡 BELUM DIBAYAR</span><p class="muted">Hari pembayaran: Jumat. Lu bisa menandai setelah uang benar-benar diterima.</p>';
+ let ts=weekSales(w).filter(x=>x.date===today).reduce((a,x)=>a+Number(x.qty),0);
+ document.getElementById('todaySummary').innerHTML=ts?`Hari ini sudah tercatat <b>${ts} es</b>.`:'Belum ada antar es yang dicatat hari ini.';
 
-function saveCalendar(){
-window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Miftah+%26+Asni&dates=20260725T000000/20260725T030000");
+ renderSales(w);renderCapital(w);renderPayment(w);renderHistory();
 }
-
-function kirimPesan(){
-let nama=document.getElementById("namaPengirim").value;
-let pesan=document.getElementById("isiPesan").value;
-if(!nama||!pesan){alert("Isi dulu 😊");return;}
-let data=JSON.parse(localStorage.getItem("pesan"))||[];
-data.push({nama,pesan});
-localStorage.setItem("pesan",JSON.stringify(data));
-document.getElementById("namaPengirim").value="";
-document.getElementById("isiPesan").value="";
-tampil();
+function renderSales(w){
+ let arr=weekSales(w).sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id);
+ if(!arr.length){document.getElementById('salesList').innerHTML='<div class="empty">Belum ada catatan antar.</div>';return}
+ let by={};arr.forEach(x=>{(by[x.date]??=[]).push(x)});
+ let html='';
+ Object.keys(by).sort().reverse().forEach(d=>{
+   let total=by[d].reduce((a,x)=>a+Number(x.qty),0);
+   html+=`<h3 style="margin-top:15px">${fmtDate(d)} — ${total} es</h3><table><tr><th>Jumlah</th><th>Catatan</th><th></th></tr>`;
+   by[d].forEach(x=>html+=`<tr><td>${x.qty} es</td><td>${x.note||'-'}</td><td><button class="danger" onclick="del('sales',${x.id})">Hapus</button></td></tr>`);
+   html+='</table>';
+ });
+ document.getElementById('salesList').innerHTML=html+`<p><b>Total minggu: ${qtyForWeek(w)} es</b></p>`;
 }
-function tampil(){
-let daftar=document.getElementById("daftarPesan");
-daftar.innerHTML="";
-let data=JSON.parse(localStorage.getItem("pesan"))||[];
-data.reverse().forEach(item=>{
-daftar.innerHTML+=`<div class="pesan-item"><strong>${item.nama}</strong><br>${item.pesan}</div>`;
-});
+function renderCapital(w){
+ let arr=weekPurchases(w).sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id);
+ if(!arr.length){document.getElementById('capitalList').innerHTML='<div class="empty">Belum ada pembelian minggu ini.</div>';return}
+ let html='<table><tr><th>Tanggal</th><th>Bahan</th><th>Jumlah</th><th>Total</th><th></th></tr>';
+ arr.forEach(x=>html+=`<tr><td>${fmtDate(x.date)}</td><td>${x.item}</td><td>${x.qty} ${x.unit||''}</td><td>${rupiah(x.unitPrice ?? (x.price/Number(x.qty||1)))} × ${x.qty}<br><b>${rupiah(x.price)}</b></td><td><button class="danger" onclick="del('purchases',${x.id})">×</button></td></tr>`);
+ html+='</table><p><b>Total modal dibeli: '+rupiah(capital(w))+'</b></p>';
+ document.getElementById('capitalList').innerHTML=html;
 }
-document.addEventListener("DOMContentLoaded",tampil);
-
-const params=new URLSearchParams(window.location.search);
-const tamu=params.get('to');
-if(tamu){document.getElementById("namaTamu").innerText=tamu;}
-
+function renderPayment(w){
+ let q=qtyForWeek(w),g=gross(w),sc=storeCut(w),inc=income(w),p=paid(w);
+ document.getElementById('paymentDetail').innerHTML=`
+ <div class="grid">
+  <div class="stat"><small>Es bersih</small><b>${q}</b></div>
+  <div class="stat"><small>Kotor</small><b>${rupiah(g)}</b></div>
+  <div class="stat"><small>Toko ${db.settings.storePercent}%</small><b>${rupiah(sc)}</b></div>
+  <div class="stat"><small>Lu terima</small><b>${rupiah(inc)}</b></div>
+ </div>
+ <p style="margin-top:14px">Status: ${p?'<span class="badge paid">Sudah dibayar</span>':'<span class="badge pending">Belum dibayar</span>'}</p>`;
+ document.getElementById('payButton').disabled=p;
+ document.getElementById('payButton').style.opacity=p?.55:1;
+}
+function renderHistory(){
+ let starts=[...new Set([...db.sales.map(x=>startOfWeek(x.date)),...db.purchases.map(x=>startOfWeek(x.date)),...db.payments.map(x=>x.week)])].sort().reverse();
+ if(!starts.length){document.getElementById('historyList').innerHTML='<div class="card empty">Belum ada riwayat.</div>';return}
+ document.getElementById('historyList').innerHTML=starts.map(w=>{
+  let q=qtyForWeek(w),g=gross(w),i=income(w),c=capital(w),isPaid=paid(w);
+  return `<div class="card"><h3>${fmtDate(w)} – ${fmtDate(weekEnd(w))}</h3>
+  <div class="grid"><div class="stat"><small>Es</small><b>${q}</b></div><div class="stat"><small>Diterima</small><b>${rupiah(i)}</b></div><div class="stat"><small>Modal dibeli</small><b>${rupiah(c)}</b></div><div class="stat"><small>Surplus perkiraan</small><b>${rupiah(i-c)}</b></div></div>
+  <p>${isPaid?'<span class="badge paid">🟢 Dibayar</span>':'<span class="badge pending">🟡 Belum dibayar</span>'}</p></div>`;
+ }).join('');
+}
+function exportData(){
+ let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);a.download='backup-usaha-es-'+dateStr(new Date())+'.json';a.click();URL.revokeObjectURL(a.href);
+}
+function restoreData(e){
+ let f=e.target.files[0];if(!f)return;let r=new FileReader();
+ r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.sales||!x.purchases)throw 0;if(!confirm("Data sekarang akan diganti dengan backup ini. Lanjut?"))return;db=x;save();alert("Data berhasil dipulihkan.")}catch{alert("File backup tidak valid.")}};
+ r.readAsText(f);
+}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+setDefaults();
+ document.getElementById('buyQty').addEventListener('input',updateBuyPreview);
+ document.getElementById('buyPrice').addEventListener('input',updateBuyPreview);
+ renderAll();
 </script>
-
 </body>
 </html>

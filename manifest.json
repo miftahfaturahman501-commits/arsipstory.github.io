@@ -1,6 +1,6 @@
 {
-  "name": "Usaha Es",
-  "short_name": "Usaha Es",
+  "name": "Usaha Es Fatur",
+  "short_name": "Es Fatur",
   "description": "Catatan penjualan, pembelian, dan pembayaran usaha es",
   "id": "./index.html",
   "start_url": "./index.html",
